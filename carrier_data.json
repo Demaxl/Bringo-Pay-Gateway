@@ -1,0 +1,108 @@
+{
+    "3": {
+        "operator_name": "VODACOM",
+        "modem_port": "/dev/ttyACM1",
+        "transaction_type_ids": {
+            "1040": [
+                "AT+CUSD=1,\"*1117*01*PASSWORD*NUMBER*AMOUNT#\""
+            ],
+            "1041": [
+                "AT+CUSD=1,\"*1117#\"",
+                "AT+CUSD=1,\"2\"",
+                "AT+CUSD=1,\"1\"",
+                "AT+CUSD=1,\"1\"",
+                "AT+CUSD=1,\"1\"",
+                "AT+CUSD=1,\"NUMBER\"",
+                "AT+CUSD=1,\"PASSWORD\"",
+                "AT+CUSD=1,\"1\""
+            ],
+            "1064": [
+                "AT+CUSD=1,\"*1117#\"",
+                "AT+CUSD=1,\"2\"",
+                "AT+CUSD=1,\"2\"",
+                "AT+CUSD=1,\"1\"",
+                "AT+CUSD=1,\"1\"",
+                "AT+CUSD=1,\"NUMBER\"",
+                "AT+CUSD=1,\"PASSWORD\"",
+                "AT+CUSD=1,\"1\""
+            ]
+        }
+    },
+    "4": {
+        "operator_name": "AIRTEL",
+        "modem_port": "/dev/ttyACM0",
+        "transaction_type_ids": {
+            "1005": [
+                "AT+CUSD=1,\"*1000*NUMBER*AMOUNT*PASSWORD#\""
+            ],
+            "1006": [
+                "AT+CUSD=1,\"*1000#\"",
+                "AT+CUSD=1,\"5\"",
+                "AT+CUSD=1,\"2\"",
+                "AT+CUSD=1,\"1\"",
+                "AT+CUSD=1,\"1\"",
+                "AT+CUSD=1,\"NUMBER\"",
+                "AT+CUSD=1,\"PASSWORD\""
+            ],
+            "1021": [
+                "AT+CUSD=1,\"*1000#\"",
+                "AT+CUSD=1,\"5\"",
+                "AT+CUSD=1,\"1\"",
+                "AT+CUSD=1,\"1\"",
+                "AT+CUSD=1,\"NUMBER\"",
+                "AT+CUSD=1,\"PASSWORD\""
+            ]
+        }
+    },
+    "5": {
+        "operator_name": "Orange",
+        "modem_port": "/dev/ttyACM2",
+        "transaction_type_ids": {
+            "1085": [
+                "AT+CUSD=1,\"*134*NUMBER*AMOUNT*PASSWORD#\"",
+                "AT+CUSD=1,\"1\""
+            ],
+            "1086": [
+                "AT+CUSD=1,\"*396#\"",
+                "AT+CUSD=1,\"1\"",
+                "AT+CUSD=1,\"2\"",
+                "AT+CUSD=1,\"NUMBER\"",
+                "AT+CUSD=1,\"1\"",
+                "AT+CUSD=1,\"PASSWORD\""
+            ],
+            "1092": [
+                "AT+CUSD=1,\"*396#\"",
+                "AT+CUSD=1,\"2\"",
+                "AT+CUSD=1,\"2\"",
+                "AT+CUSD=1,\"NUMBER\"",
+                "AT+CUSD=1,\"1\"",
+                "AT+CUSD=1,\"PASSWORD\""
+            ]
+        }
+    },
+    "6": {
+        "operator_name": "AfriCell",
+        "modem_port": "/dev/ttyACM3",
+        "transaction_type_ids": {
+            "1103": [
+                "AT+CUSD=1,\"*1012*1*PASSWORD*NUMBER*AMOUNT#\""
+            ],
+            "1104": [
+                "AT+CUSD=1,\"*1017#\"",
+                "AT+CUSD=1,\"PASSWORD\"",
+                "AT+CUSD=1,\"NUMBER\"",
+                "AT+CUSD=1,\"9\"",
+                "AT+CUSD=1,\"1\"",
+                "AT+CUSD=1,\"1\""
+            ],
+            "1113": [
+                "AT+CUSD=1,\"*1017#\"",
+                "AT+CUSD=1,\"PASSWORD\"",
+                "AT+CUSD=1,\"NUMBER\"",
+                "AT+CUSD=1,\"7\"",
+                "AT+CUSD=1,\"1\"",
+                "AT+CUSD=1,\"1\""
+            ]
+        }
+    }
+}
