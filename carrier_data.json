@@ -2,6 +2,7 @@
     "3": {
         "operator_name": "VODACOM",
         "modem_port": "/dev/ttyACM1",
+        "modem_password": "2020",
         "transaction_type_ids": {
             "1040": [
                 "AT+CUSD=1,\"*1117*01*PASSWORD*NUMBER*AMOUNT#\""
@@ -31,6 +32,7 @@
     "4": {
         "operator_name": "AIRTEL",
         "modem_port": "/dev/ttyACM0",
+        "modem_password": "2020",
         "transaction_type_ids": {
             "1005": [
                 "AT+CUSD=1,\"*1000*NUMBER*AMOUNT*PASSWORD#\""
@@ -57,6 +59,7 @@
     "5": {
         "operator_name": "Orange",
         "modem_port": "/dev/ttyACM2",
+        "modem_password": "2020",
         "transaction_type_ids": {
             "1085": [
                 "AT+CUSD=1,\"*134*NUMBER*AMOUNT*PASSWORD#\"",
@@ -83,6 +86,7 @@
     "6": {
         "operator_name": "AfriCell",
         "modem_port": "/dev/ttyACM3",
+        "modem_password": "2020",
         "transaction_type_ids": {
             "1103": [
                 "AT+CUSD=1,\"*1012*1*PASSWORD*NUMBER*AMOUNT#\""

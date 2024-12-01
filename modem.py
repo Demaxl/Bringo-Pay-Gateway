@@ -7,7 +7,7 @@ from .utils import log_message
 BAUD_RATE = 115200  # Baud rate
 
 
-def send_ussd_command(port, mobile_number, transaction_amount):
+def send_ussd_command(port, mobile_number, transaction_amount, commands):
     """
     Send a USSD command to the modem and read the response.
     """
