@@ -1,20 +1,8 @@
-"""
-Example request:
-{
-    user_id: 1,
-    carrier_id: 6,
-    transaction_type_id: 2
-    transaction_amount: 5
-    mobile_number: 0998407604 
-}
-"""
-import os
 import asyncio
 import websockets
 import json
 
-from pprint import pprint
-
+from modem import send_ussd_command
 from utils import log_message
 
 
@@ -29,8 +17,7 @@ with open("carrier_data.json") as json_file:
     CARRIER_DATA = json.load(json_file)
 
 
-# async def handle_message(message):
-def handle_message(message):
+async def handle_message(message):
     """
     Process the message from the cloud server
     """
@@ -44,7 +31,8 @@ def handle_message(message):
     commands = [command.replace('NUMBER', message["mobile_number"]).replace(
         'AMOUNT', str(message["transaction_amount"])).replace('PASSWORD', modem_password) for command in commands]
 
-    pprint(commands)
+    await send_ussd_command(
+        modem_port, message["mobile_number"], message["transaction_amount"], commands)
 
 
 async def websocket_client():
@@ -56,6 +44,7 @@ async def websocket_client():
         # Continuously listen for messages
         while True:
             message = await websocket.recv()
+            message = json.loads(message)
             print(f"Message received: {message}")
             # Start processing the message in parallel
             asyncio.create_task(handle_message(message))
@@ -63,13 +52,4 @@ async def websocket_client():
 
 if __name__ == "__main__":
     # Run the WebSocket client
-    # asyncio.run(websocket_client())
-    test = {
-        "user_id": 1,
-        "carrier_id": 5,
-        "transaction_type_id": 1086,
-        "transaction_amount": 6,
-        "mobile_number": "0998407604"
-    }
-
-    handle_message(test)
+    asyncio.run(websocket_client())
