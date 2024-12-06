@@ -52,4 +52,13 @@ async def websocket_client():
 
 if __name__ == "__main__":
     # Run the WebSocket client
-    asyncio.run(websocket_client())
+    # asyncio.run(websocket_client())
+    test = {
+        "user_id": 1,
+        "carrier_id": 5,
+        "transaction_type_id": 1086,
+        "transaction_amount": 6,
+        "mobile_number": "0998407604"
+    }
+
+    asyncio.run(handle_message(test))
