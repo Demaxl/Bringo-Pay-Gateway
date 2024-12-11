@@ -55,9 +55,9 @@ if __name__ == "__main__":
     # asyncio.run(websocket_client())
     test = {
         "user_id": 1,
-        "carrier_id": 5,
-        "transaction_type_id": 1086,
-        "transaction_amount": 6,
+        "carrier_id": 4,
+        "transaction_type_id": 1005,
+        "transaction_amount": 7,
         "mobile_number": "0998407604"
     }
 
